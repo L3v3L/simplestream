@@ -15,8 +15,8 @@ class CreateBooking extends Component
     protected $rules = [
 
         'title' => 'required|min:6',
-        'start_time' => 'required|date',
-        'end_time' => 'required|date|after:start_time',
+        'start_time' => 'required|date_format:"Y-m-d H:i:s"',
+        'end_time' => 'required|date_format:"Y-m-d H:i:s"|after:start_time',
     ];
 
     public function save()
